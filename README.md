@@ -33,7 +33,7 @@ Workflow -  All the above core concepts combined is workflow
 
 * Single Node
 
-!(Single Node Architecture )[/images/singlenode.png]
+![Single Node Architecture ](/images/singlenode.png)
 
 -   In single node all the components, Webserver, Executor, scheduler will be on the same node.
 - It is better to maintain metadata database on the seperate node for failover  
@@ -42,7 +42,7 @@ Workflow -  All the above core concepts combined is workflow
     * Queueing services - RabbitMQ
 
 
-!(Multi Node Architecture )[/images/cluster.png]
+![Multi Node Architecture ](/images/cluster.png)
 
 - In the cluster(Multi Node), only webserver and scheduler will be on the same node.
 - All the executor n, will be on seperate node, helps to reduce the load
