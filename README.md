@@ -73,7 +73,7 @@ Webserver continuously fetches the data from the metadata database and updates t
 ### Installation Steps
 
 * Download the requirements file from apache/airflow/requrements/<python_version_specified>
-* pip install "apache-airflow[celery,crypto,mysql,rabbitmq,redis]"==<version> -- constaint requirements.txt
+* pip install "apache-airflow[celery,crypto,mysql,rabbitmq,redis]"== version_number -- constraint requirements.txt
 
     Once the installation all the packages is done,type
     
