@@ -72,12 +72,24 @@ Webserver continuously fetches the data from the metadata database and updates t
 
 ### Installation Steps
 
-* Download the requirements file from apache/airflow/requrements/<python_version_specified>
-* pip install "apache-airflow[celery,crypto,mysql,rabbitmq,redis]"== version_number -- constraint requirements.txt
+1. Create virtual environment
+    * Mac and Linux
+        
+        * python3 -m venv <b>env_name</b>
+    * windows
 
+        * py -m venv <b>env_name</b> 
+2. Activate the virtual environment 
+    *    source <b>env_name></b>/bin/activate
+
+3.Install apache airflow with custom plugins
+
+* pip install apache-airflow[postgres,gcp]==1.10.12 --constraint "https://raw.githubusercontent.com/apache/airflow/constraints-1.10.12/constraints-3.7.txt"
     Once the installation all the packages is done,type
     
-    * airflow intidb #Which initializes the database with necessary tables.
+    Ref: Instalation Guide - [Offical Document](https://airflow.apache.org/docs/stable/installation.html)
+
+* airflow intidb #Which initializes the database with necessary tables.
         * Folder Structure
             |
             
