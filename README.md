@@ -60,6 +60,7 @@ Step 2: If a DAG exists, it must be triggered. A DAGRun object is created based 
 Step 3: A Taskinstance is instantiated for each task need to be executed and flagged "Scheduled" in the metadata database
 
 Step 4: The scheduler gets all the tasks with status "Scheduled" from the metadata database, changes the state to "Queue" and sends them to the executors to execute 
+
 Step 5: Executors pulls outs the each task from the Queue based on the execution priority. Changes the state from "Queued" to "Running" and workers start executing the TaskInstance
 
 Step 6: When the task is finished, executor changes the state from "Running" to its final status like Success, failed, etc. 
@@ -104,8 +105,24 @@ Webserver continuously fetches the data from the metadata database and updates t
     * Create a dags folder
         
         * default dags folder path will be at airflow.cfg
-        #grep dags_folder aitflow.cfg
+          
+            ``` grep dags_folder aitflow.cfg ```
 
+
+# Docker 
+ 
+ Step 1: Download docker-compose file [docker-compose](/docker-compose.yaml)
+ 
+ Step 2: Initiate the db
+ 
+  ```docker-compose up airflow-init ```
+ 
+ Step 3: Create and start the airflow services
+ 
+ ```docker-compose up -d```
+ 
+ 
+ 
 
 ### Useful commands
 
